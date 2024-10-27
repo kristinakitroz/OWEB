@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Pizza</title>
+    <link rel="stylesheet" href="domasna2.css">
+</head>
+<body>
+<div class="container">
+    <h1 class="rotate-text">Order pizza!</h1> <!--Glavno ime(title) na formata-->
+
+    <form action="https://www.Kiki's Pizza.mk" method="post"> 
+
+        <!--Izbor na golemina na pica-->
+        <p>Select the pizza size:</p>
+        <input type="radio" id="big" name="size" value="big" checked>
+        <label for="big">Big</label>
+        <br>
+        <input type="radio" id="medium" name="size" value="medium">
+        <label for="medium">Medium</label>
+        <br>
+        <input type="radio" id="small" name="size" value="small">
+        <label for="small">Small</label>
+        <br>
+
+        <!-- Izbor na kora na picata-->
+        <p>Select the crust type:</p>
+        
+        <select name="crust" id="crust" style="width: 40%;">
+            <option value="deep_dish">Deep Dish</option>
+            <option value="thin_crust">Thin Crust</option>
+            <option value="regular">Regular</option>
+            <option value="pitta bread">Pitta Bread</option>
+            <option value="gluten-free cust">Gluten-Free Crust</option>
+
+        </select>
+        <br>
+
+        <!-- izbor na dodatoci-->
+        <p>Select the filler:</p>
+        <input type="checkbox" id="sausages" name="filler[]" value="sausages">
+        <label for="sausages">Sausages🥖</label>
+        <br>
+        <input type="checkbox" id="pepper" name="filler[]" value="pepper">
+        <label for="pepper">Pepper🫑</label>
+        <br>
+        <input type="checkbox" id="mushrooms" name="filler[]" value="mushrooms">
+        <label for="mushrooms">Mushrooms🍄‍🟫</label>
+        <br>
+        <input type="checkbox" id="olives" name="filler[]" value="olives">
+        <label for="olives">Olives🫒</label>
+        <br>
+        <input type="checkbox" id="bacon" name="filler[]" value="bacon">
+        <label for="bacon">Bacon🥓</label>
+        <br><br>
+
+        <!-- Input na ime i broj(grupirani vo flexbox) -->
+        <div class="input-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="input-group">
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone" required>
+        </div>
+
+        <!-- Input za poraka -->
+        <textarea id="message" name="message" rows="4" placeholder="Message:"></textarea>
+        <br><br>
+
+        <!-- Send i Reset kopcinja -->
+         <div class="pizzabuttons">
+        <button class="send-button" type="send">Send</button>
+        <button class="reset-button" type="reset">Reset</button>
+         </div>
+    </form>
+</div>
+
+</body>
+</html>
+

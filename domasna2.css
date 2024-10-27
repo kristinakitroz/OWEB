@@ -1,0 +1,170 @@
+
+   /* Stil za teloto na stranata*/
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('pizza pozadina.jpg');
+        }
+    /* Stil za outlineot okolu tekstot */
+        .container {
+            width: 300px;
+            padding: 5px 70px;
+            border:10px inset;
+            border-color: rgb(237, 170, 55);
+            text-align: center;
+            background-color: #f6e3ae;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), 
+            0 -4px 15px rgba(255, 255, 255, 0.2), 
+            -4px 0 15px rgba(255, 255, 255, 0.2);
+        }   
+    /* Header text da bide bold*/
+        .container h1 {
+            font-weight: bold;
+        }
+    /* Da nema prazno mesto posle paragraph elementite i da bidat bold*/
+        .container p {
+            margin-bottom: 0;
+            font-weight: bold;
+        }
+     /* Stil za input polinja, tekst elementi, i menia za selektiranje(dropdown) */
+        .container input[type="text"], 
+        .container textarea, 
+        .container select {
+            width: 100%;
+            margin-bottom: 0;
+            box-sizing: border-box;
+        }
+    /* Stil za grupa na input polinja */
+        .container .input-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0; 
+        }
+    /* Stil za tekstot(label) pred input polinjata*/
+        .container .input-group label {
+            width: 30%; 
+            text-align: right; 
+            font-weight: bold;
+        }
+    /* Stil za input pole za ime */
+        .container #name {
+            width: 60%; 
+            margin-left: 0; 
+            margin-right: 50px;
+        }
+    /* Stil za input pole za broj*/
+        .container #phone {
+            width: 60%; 
+            margin-left: 0; 
+            margin-right: 50px;
+        }
+    /* Mestenje na marginite na menito za izbor na tip na kora */
+        .container #crust {
+            margin-top: 0; 
+            margin-bottom: 15px; 
+        }
+    /* Otstranuvanje na prostorot izmegju kopcinjata za izbor i nivnite iminja*/
+        .container input[type="radio"] + label,
+        .container input[type="checkbox"] + label {
+            margin-left: 0; 
+            vertical-align: middle; 
+        }
+    /* Ostranuanje na marginite na kopcinjata za izbor */
+        .container input[type="radio"],
+        .container input[type="checkbox"] {
+             margin: 0; 
+            vertical-align: middle; 
+        }
+    /* Placeholder tekstot da e levo */
+        .container textarea::placeholder {
+            text-align: left;
+        }
+    /* Margini okolu kopcinjata */
+        .container button {
+            margin: 5px;
+        }
+    /*Animacija na tekst*/
+        @keyframes horizontalflip {
+           0% {
+                transform: rotateY(0deg);
+            }
+          100%{
+                transform: rotateY(360deg);
+           }
+        }
+    /* Horizontalna rotacija na tekstot*/
+        .rotate-text {
+        display: insline-block;
+        animation: horizontalflip 7s linear infinite;
+        transform-origin: center;
+        }
+    /*Promena na kursorot vo pointer*/
+        label {
+        cursor: pointer; 
+        }
+    /*Interaktiven tekst(se menuva bojata koga ke dojde kursorot na nego)*/
+        label:hover {
+        color: #f6810c; 
+        transform: scale(1.1); 
+        } 
+    /*Za kopcinjata vo forma na pica*/
+        .pizzabuttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+        }
+    /*Postavki za kopcinjata da se vo forma na pica*/    
+        button {
+            background-image: url('pizza\ slika.png');
+            background-size: cover;
+            background-position: center;
+            border: none;
+            border-radius: 50%;
+            width: 90px; 
+            height: 90px; 
+            cursor: pointer;
+            position: relative;
+        }
+    /*Kopceto se zgolemuva koga ke dojde kursorot na nego*/
+        button:hover {
+            transform: scale(1.05); 
+        }
+    /*Bela pozadina za tekstot*/
+        button::after {
+            position: absolute;
+            background-color: rgb(255, 255, 255); 
+            border-radius: 5px; 
+            padding: 4px 5px; 
+            font-size: 14px;
+            font-weight: bold; 
+            color: black; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    /*Tekstot Reset*/
+        .reset-button::after {
+            content: "Reset";
+            top: 50%;
+            left: 50%;
+            position:absolute;
+            transform: translate(-50%, -50%); 
+        }
+    /*Tekstot Send*/
+        .send-button::after {
+            content: "Send"; 
+            top: 50%;
+            left: 50%;
+            position:absolute;
+            transform: translate(-50%, -50%); 
+        }
+
+        
+
+ 
