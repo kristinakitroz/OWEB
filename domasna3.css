@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image:url(pozadinabukvi.png);
+    background-size: cover;
+    margin: 0;
+
+}
+
+.game-container {
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), 
+    0 -4px 15px rgba(255, 255, 255, 0.2), 
+    -4px 0 15px rgba(255, 255, 255, 0.2);
+    border:10px inset;
+    border-color: rgb(229, 218, 10);
+    
+}
+
+#word-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.letter-box {
+    border-bottom: 2px solid #000;
+    width: 30px;
+    margin: 0 5px;
+    font-size: 24px;
+    text-align: center;
+}
+
+#letter-input {
+    margin-top: 10px;
+    font-size: 16px;
+    padding: 5px;
+    width: 100px;
+}
+
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: rgb(229, 218, 10);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  position:relative;
+  right:-18px;
+  top: -3px;
+
+}
+
+button:hover {background-color: #c6c622}
+
+button:active {
+  background-color: rgb(229, 218, 10);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#restart-btn {
+    display: none;
+    margin-top: 10px;
+}
