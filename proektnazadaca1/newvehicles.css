@@ -1,0 +1,336 @@
+/*Strana za novi koli*/
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #cccccc;
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+    background-color: #CEACA1;
+    color: white;
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+header p {
+    margin-bottom: 20px;
+}
+
+
+.filter-section {
+    margin-top: 20px;
+}
+
+.filter-section form {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    max-width: 100%; 
+}
+.filter-options {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 10px; 
+    width: 100%; 
+   
+}
+
+.filter-section select, .filter-button {
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    min-width: 150px; 
+    max-width: 200px;
+    flex-grow: 1; 
+    box-sizing: border-box; 
+}
+
+/* Koga ke se izbere brand togas izleguva meni za modeli*/
+.filter-options select:valid ~ #model-selection {
+    visibility: visible;
+    height: auto; 
+}
+
+
+.model-checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.model-checkbox label {
+    margin-left: 5px;
+}
+
+.filter-button {
+    background-color: #CEACA1;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin-top: 180px; 
+}
+.filter-button:hover {
+    background-color: #A17F7A;
+}
+
+.car-results {
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.car-item {
+    background: #ffffff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* stiliziranje na meniata*/
+.filter-options select,
+.model-selection {
+    padding: 8px;
+    font-size: 16px;
+    min-width: 180px; 
+    box-sizing: border-box; 
+}
+
+@media (max-width: 768px) {
+    .filter-options {
+        flex-direction: column; 
+        align-items: stretch;
+    }
+
+    .filter-section form {
+        gap: 10px;
+        min-width: 150px;
+        font-size: 14px;
+    }
+}
+
+.model-selection {
+    display: none;
+    
+}
+/* Site menia isti stil*/
+select {
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    min-width: 150px; 
+    margin-bottom: 15px; 
+}
+
+
+.filter-options select {
+    margin-right: 10px; 
+}
+
+    .car-results {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 24px;
+        padding: 20px;
+        margin-top: 30px;
+    }
+    
+    .car-card {
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    .car-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    
+    .car-card-link {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+    }
+    
+    .car-image-container {
+        position: relative;
+        width: 100%;
+        padding-top: 75%; 
+        overflow: hidden;
+    }
+    
+    .car-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .car-info {
+        padding: 16px;
+    }
+    
+    .car-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin: 0 0 8px 0;
+        color: #333;
+    }
+    
+    .car-specs {
+        display: flex;
+        align-items: center;
+        color: #666;
+        font-size: 0.9rem;
+        margin-bottom: 12px;
+    }
+    
+    .spec-separator {
+        margin: 0 8px;
+        color: #999;
+    }
+    
+    .car-price {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #222;
+    }
+    
+    .no-results {
+        grid-column: 1 / -1;
+        text-align: center;
+        padding: 40px;
+        background: #f8f9fa;
+        border-radius: 8px;
+    }
+    
+    .no-results h3 {
+        color: #333;
+        margin-bottom: 8px;
+    }
+    
+    .no-results p {
+        color: #666;
+    }
+    
+  
+    @media (max-width: 768px) {
+        .car-results {
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 16px;
+            padding: 16px;
+        }
+    
+        .car-title {
+            font-size: 1.1rem;
+        }
+    
+        .car-price {
+            font-size: 1.25rem;
+        }
+    }
+
+
+.dropdown-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;  /* Adjust based on your layout */
+    margin: 0 auto;
+    flex-wrap: nowrap;  /* Prevent wrapping to next line */
+}
+
+
+select {
+    height: 40px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 16px;
+    width: 200px;  
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 10px;
+    cursor: pointer;
+    margin: 0; 
+    position: relative;
+}
+
+select:hover {
+    border-color: #999;
+}
+
+select:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+
+select option {
+    padding: 8px;
+}
+
+/* Za pomali ekrani*/
+@media (max-width: 1200px) {
+    .dropdown-container {
+        padding: 20px 10px;
+        gap: 10px;
+    }
+    
+    select {
+        min-width: 150px;
+        font-size: 14px;
+    }
+}
+
+/* Za mobilen ekran */
+@media (max-width: 768px) {
+    .dropdown-container {
+        flex-wrap: wrap;  
+    }
+    
+    select {
+        flex: 1 1 calc(50% - 10px);  
+        min-width: 140px;
+    }
+}
+
+select:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+    z-index: 1;  
+}
+
+.backbutton{
+        background-color: #CEACA1;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        border-radius: 4px;
+        
+}

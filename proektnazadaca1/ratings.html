@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ratings</title>
+    <link rel="stylesheet" href="ratings.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="proektnazadaca.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Rate Our Services</h2>
+        <form id="ratingsForm">
+            <div class="form-group">
+                <label for="availabilityRating">Rate Availability of Models:</label>
+                <div class="star-rating" id="availabilityRating">
+                    <span data-value="1" class="star">★</span>
+                    <span data-value="2" class="star">★</span>
+                    <span data-value="3" class="star">★</span>
+                    <span data-value="4" class="star">★</span>
+                    <span data-value="5" class="star">★</span>
+                    <input type="hidden" name="availabilityRating" id="availabilityRatingInput" value="">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="carQualityRating">Rate Car Quality:</label>
+                <div class="star-rating" id="carQualityRating">
+                    <span data-value="1" class="star">★</span>
+                    <span data-value="2" class="star">★</span>
+                    <span data-value="3" class="star">★</span>
+                    <span data-value="4" class="star">★</span>
+                    <span data-value="5" class="star">★</span>
+                    <input type="hidden" name="carQualityRating" id="carQualityRatingInput" value="">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="serviceRating">Rate Our Customer Service:</label>
+                <div class="star-rating" id="serviceRating">
+                    <span data-value="1" class="star">★</span>
+                    <span data-value="2" class="star">★</span>
+                    <span data-value="3" class="star">★</span>
+                    <span data-value="4" class="star">★</span>
+                    <span data-value="5" class="star">★</span>
+                    <input type="hidden" name="serviceRating" id="serviceRatingInput" value="">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="overallRating">Overall Rating:</label>
+                <div class="star-rating" id="overallRating">
+                    <span data-value="1" class="star">★</span>
+                    <span data-value="2" class="star">★</span>
+                    <span data-value="3" class="star">★</span>
+                    <span data-value="4" class="star">★</span>
+                    <span data-value="5" class="star">★</span>
+                    <input type="hidden" name="overallRating" id="overallRatingInput" value="">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="anonymous">Would you like to remain anonymous?</label>
+                <input type="checkbox" id="anonymous" name="anonymous">
+            </div>
+
+            <div id="nameFields" class="form-group" style="display:none;">
+                <label for="name">Your Name:</label>
+                <input type="text" id="firstName" name="firstName" placeholder="First Name">
+                <input type="text" id="lastName" name="lastName" placeholder="Last Name">
+            </div>
+
+            <button type="submit" id="submitRating">Submit Rating</button>
+        </form>
+
+        <p id="confirmationMessage" class="confirmation-message"></p>
+    </div>
+
+    <script src="ratings.js"></script>
+</body>
+</html>

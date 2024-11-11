@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Details</title>
+    <link href="usedvehiclesdetails.css" rel="stylesheet">
+</head>
+<body>
+    <!--Sekoja karticka na koli koga ke se klikne se prenasocuva do ovaa strana-->
+    <div id="car-details-container"></div>
+
+    
+    <script>
+    
+        const cars = [
+    { 
+        id: 1, brand: "Kia", model: "EV9", year: "2022", kilometers: "20,000", price: "35000", overallrating: "★★★★★", 
+        imageUrl1: "kiaev9used.jpg", imageUrl2: "kiaev9used.jpg", imageUrl3: "kiaev9used.jpg", gearbox: "Automatic", fuelType: "Electric" 
+    },
+    { 
+        id: 2, brand: "Kia", model: "Sportage", year: "2020", kilometers: "20,000", price: "35000", overallrating: "★★★★☆", 
+        imageUrl1: "kiasportageused.avif", imageUrl2: "kiasportageused.avif", imageUrl3: "kiasportageused.avif", gearbox: "Manual", fuelType: "Gasoline" 
+    },
+    { 
+        id: 3, brand: "MercedesBenz", model: "GLB 200", year: "2021", kilometers: "10,000", price: "40000", overallrating: "★★★★★", 
+        imageUrl1: "mercedezbenzglb200used.webp", imageUrl2: "mercedezbenzglb200used.webp", imageUrl3: "mercedezbenzglb200used.webp", gearbox: "Automatic", fuelType: "Diesel" 
+    },
+    { 
+        id: 4, brand: "MercedesBenz", model: "35 AMG", year: "2023", kilometers: "5,000", price: "50000", overallrating: "★★★★☆", 
+        imageUrl1: "mercedezbenz35amgused.webp", imageUrl2: "mercedezbenz35amgused.webp", imageUrl3: "mercedezbenz35amgused.webp", gearbox: "Automatic", fuelType: "Petrol" 
+    },
+    { 
+        id: 5, brand: "MercedesBenz", model: "CLA 200", year: "2023", kilometers: "3,000", price: "70000", overallrating: "★★★★☆", 
+        imageUrl1: "mercedezbenzcla200used.webp", imageUrl2: "mercedezbenzcla200used.webp", imageUrl3: "mercedezbenzcla200used.webp", gearbox: "Automatic", fuelType: "Diesel" 
+    },
+    { 
+        id: 6, brand: "Opel", model: "Astra", year: "2023", kilometers: "3,000", price: "70000", overallrating: "★★★★★", 
+        imageUrl1: "opelastraused.webp", imageUrl2: "opelastraused.webp", imageUrl3: "opelastraused.webp", gearbox: "Manual", fuelType: "Petrol" 
+    },
+    { 
+        id: 7, brand: "Volkswagen", model: "Golf", year: "2023", kilometers: "80,000", price: "70000", overallrating: "★★★☆☆", 
+        imageUrl1: "volkswagengolfused.webp", imageUrl2: "volkswagengolfused.webp", imageUrl3: "volkswagengolfused.webp", gearbox: "Automatic", fuelType: "Gasoline" 
+    },
+    { 
+        id: 8, brand: "Volkswagen", model: "T-cross", year: "2015", kilometers: "20,000", price: "70000", overallrating: "★★★★☆", 
+        imageUrl1: "volkswagent-crossused.webp", imageUrl2: "volkswagent-crossused.webp", imageUrl3: "volkswagent-crossused.webp", gearbox: "Manual", fuelType: "Diesel" 
+    },
+    { 
+        id: 9, brand: "Volkswagen", model: "Tiguan", year: "2017", kilometers: "10,000", price: "70000", overallrating: "★★★★★", 
+        imageUrl1: "volkswagentiguanused.webp", imageUrl2: "volkswagentiguanused.webp", imageUrl3: "volkswagentiguanused.webp", gearbox: "Automatic", fuelType: "Gasoline" 
+    },
+    { 
+        id: 10, brand: "Volkswagen", model: "T-roc", year: "2019", kilometers: "50,000", price: "70000", overallrating: "★★★★☆", 
+        imageUrl1: "volkswagent-rocused.webp", imageUrl2: "volkswagent-rocused.webp", imageUrl3: "volkswagent-rocused.webp", gearbox: "Automatic", fuelType: "Petrol" 
+    },
+    { 
+        id: 11, brand: "Tesla", model: "Model 3", year: "2022", kilometers: "20,000", price: "45000", overallrating: "★★★★★", 
+        imageUrl1: "teslamodel3used.jpg", imageUrl2: "teslamodel3used.jpg", imageUrl3: "teslamodel3used.jpg", gearbox: "Automatic", fuelType: "Electric" 
+    },
+    { 
+        id: 12, brand: "Ford", model: "Mustang", year: "2021", kilometers: "15,000", price: "38000", overallrating: "★★★★☆", 
+        imageUrl1: "fordmustangused.jpg", imageUrl2: "fordmustangused.jpg", imageUrl3: "fordmustangused.jpg", gearbox: "Automatic", fuelType: "Gasoline" 
+    },
+    { 
+        id: 13, brand: "BMW", model: "X5", year: "2023", kilometers: "10,000", price: "75000", overallrating: "★★★★★", 
+        imageUrl1: "bmwx5used.jpg", imageUrl2: ".bmwx5used.jpg", imageUrl3: "bmwx5used.jpg", gearbox: "Automatic", fuelType: "Diesel" 
+    },
+    { 
+        id: 14, brand: "Toyota", model: "Camry", year: "2022", kilometers: "10,000", price: "33000", overallrating: "★★★★☆", 
+        imageUrl1: "toyotacamryused.jpg", imageUrl2: "toyotacamryused.jpg", imageUrl3: "toyotacamryused.jpg", gearbox: "Automatic", fuelType: "Hybrid" 
+    },
+    { 
+        id: 14, brand: "Toyota", model: "SUV", year: "2023", kilometers: "20,000", price: "40000", overallrating: "★★★★☆", 
+        imageUrl1: "toyotacamryused.jpg", imageUrl2: ".toyotacamryused.jpg", imageUrl3: ".toyotacamryused.jpg", gearbox: "Automatic", fuelType: "Hybrid" 
+    },
+    { 
+        id: 15, brand: "Lamborghini", model: "Huracan", year: "2023", kilometers: "2,000", price: "220000", overallrating: "★★★★★", 
+        imageUrl1: "lamborghinihuracanused.jpg", imageUrl2: "lamborghinihuracanused.jpg", imageUrl3: "lamborghinihuracanused.jpg", gearbox: "Automatic", fuelType: "Petrol" 
+    },
+    { 
+        id: 16, brand: "Porsche", model: "911", year: "2023", kilometers: "5,000", price: "150000", overallrating: "★★★★★", 
+        imageUrl1: "porsche911used.jpg", imageUrl2: "porsche911front.jpg", imageUrl3: "porsche911interior.jpg", gearbox: "Automatic", fuelType: "Gasoline" 
+    },
+    { 
+        id: 17, brand: "Ferrari", model: "Roma", year: "2023", kilometers: "2,000", price: "250000", overallrating: "★★★★★", 
+        imageUrl1: "ferrarissimaused.jpg", imageUrl2: "ferrarissimaused.jpg", imageUrl3: "ferrarissimaused.jpg", gearbox: "Automatic", fuelType: "Petrol" 
+    }
+];
+
+    </script>
+   
+    <script src="usedvehiclesdetails.js"></script>
+</body>
+
+
+</html>

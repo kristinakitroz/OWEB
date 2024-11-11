@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AutoKris - Driving Your Passion</title>
+  <link rel="stylesheet" href="proektnazadaca.css">
+  <!-- Font Awesome za social media icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <!--Navigation bar-->
+  <header>
+    <div class="logo-container">
+      <img src="autokrislogocircle.png" alt="AutoKris Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#explorevehicles">Explore Vehicles</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact us</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="ratings.html">Rating</a></li>
+        <li><a button class="login-btn">Log In</a></li>
+        <li><a button class="signup-btn">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Forma za log in -->
+  <div id="login-form" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeForm('login')">&times;</span>
+      <h2>Log In</h2>
+      <form class="form-container">
+        <label for="login-email">Email:</label>
+        <input type="email" id="login-email" name="email" required>
+        <label for="login-password">Password:</label>
+        <input type="password" id="login-password" name="password" required>
+        <button type="submit" class="btn">Log In</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Forma za sign up-->
+  <div id="signup-form" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeForm('signup')">&times;</span>
+      <h2>Sign Up</h2>
+      <form class="form-container">
+        <label for="signup-name">Full Name:</label>
+        <input type="text" id="signup-name" name="name" required>
+        <label for="signup-email">Email:</label>
+        <input type="email" id="signup-email" name="email" required>
+        <label for="signup-password">Password:</label>
+        <input type="password" id="signup-password" name="password" required>
+        <button type="submit" class="btn">Sign Up</button>
+      </form>
+    </div>
+  </div>
+
+<!--Strana 1(home page)-->
+   <!-- Video pozadina -->
+   <section id="home" class="home">
+    <video autoplay muted loop id="background-video">
+        <source src="carbackgroundvideo1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    
+    <!-- Tekst -->
+    <div class="overlay-content">
+        <h1 class="animated-title">Welcome to AutoKris</h1>
+        <p class="animated-text">Explore our extensive collection of new and used vehicles. Your dream car awaits.</p>
+    </div>
+</section>
+
+<!--Strana 2-->
+<div id="content-wrapper">
+  <section id="explorevehicles" class="section2">
+    <h1>Featured Car Brands</h1>
+    <!-- Brendoci na koli -->
+    <div class="rotating-brands">
+        <div class="brand-card">
+            <img src="brands/lamborghini.jpg" alt="Brand 1">
+            <p>Lamborghini</p>
+        </div>
+        <div class="brand-card">
+            <img src="brands/porsche.jpg" alt="Brand 2">
+            <p>Porsche</p>
+        </div>
+        <div class="brand-card">
+            <img src="brands/ferrari.avif" alt="Brand 3">
+            <p>Ferrari</p>
+        </div>
+        <div class="brand-card">
+          <img src="brands/kia.jpg" alt="Brand 4">
+          <p>Kia</p>
+        </div>
+        <div class="brand-card">
+          <img src="brands/bmw.jpg" alt="Brand 5">
+          <p>BMW</p>
+        </div>
+         <div class="brand-card">
+          <img src="brands/ford.jpg" alt="Brand 6">
+          <p>Ford</p>
+        </div>
+        <div class="brand-card">
+          <img src="brands/mercedesbenz.avif" alt="Brand 7">
+          <p>Mercedes-Benz</p>
+        </div>
+        <div class="brand-card">
+          <img src="brands/opel.jpg" alt="Brand 8">
+          <p>Opel</p>
+        </div>
+        <div class="brand-card">
+          <img src="brands/tesla.jpg" alt="Brand 9">
+          <p>Tesla</p>
+        </div>
+        <div class="brand-card">
+          <img src="brands/Toyota.jpg" alt="Brand 10">
+          <p>Toyota</p>
+        </div>
+        <div class="brand-card">
+          <img src="brands/volkswagen.jpg" alt="Brand 11">
+          <p>Opel</p>
+        </div>
+    </div>
+
+    <!-- Kopcinja -->
+    <h2>Explore New Vehicles</h2>
+    <p class="subtitle">Immerse yourself in our curated selection of vehicles, designed to fuel your automotive enthusiasm.</p>
+    <div class="button-group">
+        <a href="newvehicles.html" class="button-primary">Explore New Vehicles</a>
+        <a href="usedvehicles.html" class="button-secondary">Browse Used Vehicles</a>
+    </div>
+</section>
+
+
+<!--Strana3-->
+  <section id="about" class="section3">
+    <div class="container">
+        <h2>Start Your Journey with AutoKris</h2>
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-value" data-target="95">0%</span>
+                <h3>Customer Satisfaction</h3>
+                <p>Our top priority</p>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value" data-target="500">0+</span>
+                <h3>Vehicles Available</h3>
+                <p>Find your perfect match</p>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value" data-target="30">0%</span>
+                <h3>Exclusive Offers</h3>
+                <p>Save more today</p>
+            </div>
+        </div>
+    </div>
+  </section>
+<!--Strana 4-->
+    <section id="contact" class="section4">
+      <div class="contact-container">
+        <div class="contact-intro">
+          <h2>Get in Touch for a Test Drive</h2>
+          <p class="pp">Experience the thrill of your next vehicle. Reach out to us to schedule a test drive and explore our stunning collection.</p>
+        </div>
+        <div class="contact-cards">
+          <div class="contact-card1">
+            <h3>Test Drive Request</h3>
+            <p><a href="mailto:testdrive@autokris.com">testdrive@autokris.com</a></p>
+            <p>+389 72 563 452</p>
+          </div>
+          <div class="contact-card2">
+            <h3>Customer Support</h3>
+            <p><a href="mailto:support@autokris.com">support@autokris.com</a></p>
+            <p>+389 72 432 567</p>
+          </div>
+          <div class="contact-card3">
+            <h3>Sales Inquiry</h3>
+            <p><a href="mailto:sales@autokris.com">sales@autokris.com</a></p>
+            <p>+389 72 654 123</p>
+          </div>
+          <div class="contact-card4">
+            <h3>General Inquiry</h3>
+            <p><a href="mailto:info@autokris.com">info@autokris.com</a></p>
+            <p>+389 72 873 124</p>
+          </div>
+        </div>
+      </div>  
+<!--Kontakt del-->
+<div class="contact-section">
+    <div class="contact-h2">
+    <h2>Contact AutoKris</h2>
+    <p class="contact-description">We are here to assist you with any inquiries you may have.</p>
+    </div>
+    <div class="contact-bottom">
+      <div class="contact-item">
+        <div class="icon"><i class="fa fa-clock"></i></div>
+        <div class="contact-text">
+          <strong>Office Hours</strong>
+          <p class="p1">Monday-Friday 9:00 am to 6:00 pm</p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="icon"><i class="fa fa-map-marker"></i></div>
+        <div class="contact-text">
+          <strong>Our Address</strong>
+          <p class="p1">str.Sekspirova 7, Skopje </p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="icon"><i class="fa fa-phone"></i></div>
+        <div class="contact-text">
+          <strong>Contact Us</strong>
+          <p class="p1">+389 72 432 567-AUTOKRIS</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--Strana 5-->
+<section id="reviews" class="section5">
+    <div class="reviews-container">
+        <div class="reviews-header">
+            <h1>Customer Reviews</h1>
+            <div class="reviews-count">100+ Reviews</div>
+        </div>
+
+        <!--1 Review -->
+        <div class="review-card">
+            <div class="review-top">
+                <div class="rating-category">
+                    <span class="stars">★★★★★</span>
+                    <span class="review-category">for Vehicle Quality</span>
+                </div>
+                <span class="review-date">April 10, 2022</span>
+            </div>
+            <div class="review-content">
+                Impressive selection of high-quality vehicles. The staff was very knowledgeable and friendly.
+            </div>
+            <div class="review-author">
+                <img src="emilyjonson.jpg" alt="Author Avatar" class="author-avatar">
+                <span class="author-name">Emily Johnson</span>
+            </div>
+        </div>
+
+        <!-- 2 Review -->
+        <div class="review-card">
+            <div class="review-top">
+                <div class="rating-category">
+                    <span class="stars">★★★★★</span>
+                    <span class="review-category">for Customer Service</span>
+                </div>
+                <span class="review-date">March 22, 2024</span>
+            </div>
+            <div class="review-content">
+                Exceptional customer service. They went above and beyond to help me find my dream car.
+            </div>
+            <div class="review-author">
+                <img src="michaelsmith.jpg" alt="Author Avatar" class="author-avatar">
+                <span class="author-name">Michael Smith</span>
+            </div>
+        </div>
+
+        <!-- 3 Review -->
+        <div class="review-card">
+            <div class="review-top">
+                <div class="rating-category">
+                    <span class="stars">★★★★★</span>
+                    <span class="review-category">for Overall Experience</span>
+                </div>
+                <span class="review-date">March 15, 2023</span>
+            </div>
+            <div class="review-content">
+                Great experience from start to finish. Professional team and excellent service.
+            </div>
+            <div class="review-author">
+                <img src="sarah wilson.jpg" alt="Author Avatar" class="author-avatar">
+                <span class="author-name">Sarah Wilson</span>
+            </div>
+        </div>
+    </div>
+
+<!--Footer-->
+</section>
+<footer class="footer">
+  <div class="footer-content">
+      <div class="copyright">
+          © 2023 AutoKris. Your trusted vehicle showcase destination.
+      </div>
+      
+      <div class="footer-links">
+          <nav>
+              <ul>
+                  <li><a href="#about">About AutoKris</a></li>
+                  <li><a href="newvehicles.html">Explore New Vehicles</a></li>
+                  <li><a href="usedvehicles.html">Discover Used Vehicles</a></li>
+                  <li><a href="privacy.html">Privacy Policy</a></li>
+                  <li><a href="terms.html">Terms & Conditions</a></li>
+              </ul>
+          </nav>
+      </div> 
+  </div>
+  <div class="social-links">
+      <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+  </div>
+</footer>
+  </div>
+<!--Java script za login i signup-->
+<script src="proektnazadaca.js"></script>
+  <script>
+    //Otvori log in forma
+    document.querySelector('.login-btn').addEventListener('click', function() {
+      document.getElementById('login-form').style.display = 'block';
+      document.getElementById('signup-form').style.display = 'none'; 
+    });
+
+    // Otvori css forma
+    document.querySelector('.signup-btn').addEventListener('click', function() {
+      document.getElementById('signup-form').style.display = 'block';
+      document.getElementById('login-form').style.display = 'none'; 
+    });
+
+    // Zatvori ja formata
+    function closeForm(formType) {
+      if (formType === 'login') {
+        document.getElementById('login-form').style.display = 'none';
+      } else if (formType === 'signup') {
+        document.getElementById('signup-form').style.display = 'none';
+      }
+    }
+  </script>
+
+
+  <script src="proektnazadaca.js"></script>
+</body>
+</html>
