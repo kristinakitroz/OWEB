@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  //1 search
+  $("#myInput1").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      var cellText = $(this).find("td").eq(0).text().toLowerCase();//prvata kolona se izminuva
+      $(this).toggle(cellText.indexOf(value) > -1)
+    });
+  });
+  //2 search
+  $("#myInput2").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      var cellText = $(this).find("td").eq(1).text().toLowerCase();//vtorata kolona se izminuva
+      $(this).toggle(cellText.indexOf(value) > -1)
+    });
+  });
+  //3 search
+  $("#myInput3").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      var cellText = $(this).find("td").eq(2).text().toLowerCase();//tretata kolona se izminuva
+      $(this).toggle(cellText.indexOf(value) > -1)
+    });
+  });
+});
+</script>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #ef4dca;
+  text-align: left;
+  padding: 8px;
+
+}
+
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+h2{
+    color: #ef4dca;
+}
+p{
+    color: #ef4dca;
+}
+</style>
+</head>
+<body>
+
+<h2>Filterable Table</h2>
+<p>Type something in the input field to search the table for first names, last names or emails:</p>  
+<input id="myInput1" type="text" placeholder="Search name">
+<input id="myInput2" type="text" placeholder="Search last name">
+<input id="myInput3" type="text" placeholder="Search email">
+<br><br>
+
+<table>
+  <thead>
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Email</th>
+  </tr>
+  </thead>
+  <tbody id="myTable">
+  <tr>
+    <td>John</td>
+    <td>Doe</td>
+    <td>john@example.com</td>
+  </tr>
+  <tr>
+    <td>Mary</td>
+    <td>Moe</td>
+    <td>mary@mail.com</td>
+  </tr>
+  <tr>
+    <td>July</td>
+    <td>Dooley</td>
+    <td>july@greatstuff.com</td>
+  </tr>
+  <tr>
+    <td>Kristina</td>
+    <td>Kitrozoska</td>
+    <td>kk@test.com</td>
+  </tr>
+  <tr>
+    <td>Kristina</td>
+    <td>Siljanoska</td>
+    <td>ks234@feit.com</td>
+  </tr>
+  </tbody>
+</table>
+  
+<p>Note that we start the search in tbody, to prevent filtering the table headers.</p>
+
+</body>
+</html>
